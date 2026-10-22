@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-td-sky: #38BDF8;
+    --color-td-royal: #2563EB;
+    --color-td-navy: #0B1F5B;
+    --color-td-navy-dark: #07143D;
+    --color-td-light: #F8FAFC;
+  }
+}
+
+/* Custom glow and backdrop effects */
+.glow-blue {
+  box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.35);
+}
+
+.glow-sky {
+  box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.4);
+}
+
+.glow-card {
+  box-shadow: 0 12px 36px -12px rgba(11, 31, 91, 0.08), 0 4px 12px -4px rgba(11, 31, 91, 0.04);
+}
+
+.glow-card-hover:hover {
+  box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.15), 0 6px 16px -6px rgba(11, 31, 91, 0.08);
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Terminale D - Application Scolaire",
+  "description": "Site officiel de l'application Terminale D pour Android et Web. Calcul des moyennes, agenda scolaire, emploi du temps et devoirs pour réussir son année scolaire.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

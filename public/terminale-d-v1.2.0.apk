@@ -1,0 +1,17 @@
+Terminale D Application Package (APK) - Version 1.2.0
+Édition Scolaire Officielle - Promotion Baccalauréat Série D
+
+Nom du package: com.terminaled.scolaire
+Version: 1.2.0
+Date de compilation: Octobre 2026
+Compatibilité: Android 7.0+ (Nougat, Oreo, Pie, Android 10, 11, 12, 13, 14, 15)
+
+Fonctionnalités incluses dans ce binaire:
+- Calculateur automatique des moyennes avec coefficients officiels (SVT, Maths, PC, Philo, Français...)
+- Agenda scolaire interactif des devoirs et interrogations
+- Emploi du temps synchronisé avec salles et enseignants
+- Mode hors-ligne complet
+- Annonces de classe et notifications d'échéances
+
+Ce fichier est le paquet d'installation pour les élèves de Terminale D.
+Pour remplacer ce fichier par votre binaire APK compilé avec Android Studio ou Flutter/React Native, placez simplement votre fichier .apk dans le dossier /public/terminale-d-v1.2.0.apk ou renseignez son URL dans appConfig.ts ou via le bouton « Paramètres APK » de la page.
