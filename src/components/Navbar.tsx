@@ -65,16 +65,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenWebDemo, onOpenInstallModa
 
           {/* Actions rapides Desktop */}
           <div className="hidden sm:flex items-center gap-3">
-            <button
-              type="button"
-              onClick={onOpenIosModal || onOpenWebDemo}
+            <a
+              href="https://terminal-d-jra3.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold text-[#0B1F5B] bg-slate-100 hover:bg-slate-200/80 transition-colors cursor-pointer"
             >
               <svg viewBox="0 0 170 170" className="w-3.5 h-3.5 fill-current text-[#0B1F5B]">
                 <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.59-7.71-11.66-14.01-6.19-9.56-11.09-20.91-14.7-34.05-3.6-13.14-5.41-25.13-5.41-35.97 0-14.45 3.49-26.24 10.47-35.37 6.99-9.13 15.86-13.79 26.63-13.98 5.65 0 11.5 1.52 17.56 4.56 6.05 3.04 10.05 4.57 11.99 4.57 1.74 0 5.98-1.58 12.72-4.73 6.74-3.15 12.5-4.52 17.27-4.11 13.04 1.09 23.36 6.3 30.96 15.65-11.52 6.96-17.18 16.63-16.97 29.02.22 9.78 3.91 18.04 11.09 24.78 7.17 6.74 15.76 10.65 25.76 11.74-2.17 6.74-4.89 13.7-8.15 20.89zM119.22 31.84c0-7.39 2.61-14.35 7.83-20.87 5.22-6.52 11.74-10.43 19.57-11.74.87 7.61-1.63 14.78-7.5 21.52-5.87 6.74-12.5 10.43-19.9 11.09z" />
               </svg>
               <span>Télécharger pour iOS</span>
-            </button>
+            </a>
 
             <a
               href="#telechargement"
@@ -115,20 +116,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenWebDemo, onOpenInstallModa
             </div>
 
             <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
-              <button
-                type="button"
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  if (onOpenIosModal) onOpenIosModal();
-                  else onOpenWebDemo();
-                }}
+              <a
+                href="https://terminal-d-jra3.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
                 className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold text-[#0B1F5B] bg-slate-100"
               >
                 <svg viewBox="0 0 170 170" className="w-4 h-4 fill-current text-[#0B1F5B]">
                   <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.59-7.71-11.66-14.01-6.19-9.56-11.09-20.91-14.7-34.05-3.6-13.14-5.41-25.13-5.41-35.97 0-14.45 3.49-26.24 10.47-35.37 6.99-9.13 15.86-13.79 26.63-13.98 5.65 0 11.5 1.52 17.56 4.56 6.05 3.04 10.05 4.57 11.99 4.57 1.74 0 5.98-1.58 12.72-4.73 6.74-3.15 12.5-4.52 17.27-4.11 13.04 1.09 23.36 6.3 30.96 15.65-11.52 6.96-17.18 16.63-16.97 29.02.22 9.78 3.91 18.04 11.09 24.78 7.17 6.74 15.76 10.65 25.76 11.74-2.17 6.74-4.89 13.7-8.15 20.89zM119.22 31.84c0-7.39 2.61-14.35 7.83-20.87 5.22-6.52 11.74-10.43 19.57-11.74.87 7.61-1.63 14.78-7.5 21.52-5.87 6.74-12.5 10.43-19.9 11.09z" />
                 </svg>
                 <span>Télécharger pour iOS</span>
-              </button>
+              </a>
               <a
                 href="#telechargement"
                 onClick={handleLinkClick}

@@ -175,18 +175,17 @@ export const IosDownloadModal: React.FC<IosDownloadModalProps> = ({
             Fermer
           </button>
           
-          <button
-            type="button"
-            onClick={() => {
-              onClose();
-              onOpenWebApp();
-            }}
+          <a
+            href="https://terminal-d-jra3.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onClose}
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#2563EB] hover:bg-[#1D4ED8] transition-colors shadow-sm glow-blue cursor-pointer"
           >
             <Globe className="w-4 h-4" />
-            <span>Tester maintenant dans le navigateur</span>
+            <span>Ouvrir l'application iOS (En ligne)</span>
             <ArrowRight className="w-3.5 h-3.5" />
-          </button>
+          </a>
         </div>
       </div>
     </div>

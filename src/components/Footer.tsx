@@ -76,13 +76,14 @@ export const Footer: React.FC<FooterProps> = ({
                 </a>
               </li>
               <li>
-                <button
-                  type="button"
-                  onClick={onOpenIosModal || onOpenWebDemo}
-                  className="hover:text-white transition-colors text-left cursor-pointer"
+                <a
+                  href="https://terminal-d-jra3.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors text-left"
                 >
                   Télécharger pour iOS (iPhone)
-                </button>
+                </a>
               </li>
             </ul>
           </div>

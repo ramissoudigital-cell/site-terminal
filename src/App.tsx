@@ -57,12 +57,13 @@ export default function App() {
       return;
     }
 
-    // Déclenchement du téléchargement réel du fichier
-    const apkFileName = `terminale-d-${releaseConfig.version}.apk`;
+    // Déclenchement du téléchargement réel du fichier APK
+    const apkUrl = releaseConfig.apkDownloadUrl || '/Terminal-D.apk';
+    const apkFileName = 'Terminal-D.apk';
     
     // Création d'un élément d'ancrage virtuel pour initier le téléchargement
     const link = document.createElement('a');
-    link.href = releaseConfig.apkDownloadUrl || '#';
+    link.href = apkUrl;
     link.setAttribute('download', apkFileName);
     document.body.appendChild(link);
     link.click();
@@ -72,7 +73,7 @@ export default function App() {
     setDownloadToast({
       show: true,
       title: 'Téléchargement de l\'APK démarré !',
-      message: `Fichier : ${apkFileName} (${releaseConfig.apkSize}). Suis le guide d'installation pour autoriser la source sur Android.`,
+      message: `Fichier : ${apkFileName} (${releaseConfig.apkSize}). L'installation démarre sur ton appareil Android.`,
     });
   };
 
