@@ -1,0 +1,339 @@
+.reflective-card {
+  position: relative;
+  box-sizing: border-box;
+  width: var(--rc-width);
+  height: var(--rc-height);
+  max-width: 100%;
+  perspective: 900px;
+  color: var(--rc-ink);
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.reflective-card__body {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--rc-radius);
+  background: var(--rc-base);
+  box-shadow: var(--rc-shadow);
+  transform: translate3d(0, var(--rc-lift, 0px), 0) rotateX(var(--rc-rotate-x, 0deg)) rotateY(var(--rc-rotate-y, 0deg));
+  opacity: var(--rc-presence, 1);
+  isolation: isolate;
+  will-change: transform;
+}
+
+.reflective-card__canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.reflective-card__content {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: var(--rc-pad);
+}
+
+.reflective-card__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.reflective-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--rc-ink);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.reflective-card__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  color: var(--rc-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.reflective-card__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--rc-status);
+}
+
+.reflective-card__identity {
+  margin-top: auto;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.reflective-card__avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.reflective-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reflective-card__name {
+  margin: 0;
+  color: var(--rc-ink);
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.reflective-card__role {
+  margin: 4px 0 0;
+  color: var(--rc-muted);
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.reflective-card__footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.reflective-card__id {
+  display: flex;
+  min-width: 0;
+  max-width: 100%;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.reflective-card__label {
+  color: var(--rc-muted);
+  font-size: 12px;
+  line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.reflective-card__value {
+  overflow: hidden;
+  color: var(--rc-ink);
+  font-size: 15px;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.reflective-card__tile {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--rc-tile-radius);
+  background: var(--rc-tile);
+  box-shadow: var(--rc-tile-shadow);
+  color: var(--rc-muted);
+}
+
+.reflective-card__tile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow:
+    inset 0 0 0 1px var(--rc-tile-edge),
+    inset 0 1px 0 var(--rc-tile-highlight);
+  pointer-events: none;
+}
+
+.reflective-card__rim {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  box-shadow:
+    inset 0 0 0 1px var(--rc-rim),
+    inset 0 1px 0 var(--rc-rim-highlight);
+  pointer-events: none;
+}
+
+.reflective-card__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.reflective-card[data-theme='blue'] .reflective-card__body,
+.reflective-card--blue .reflective-card__body {
+  border: 2px solid #BFDBFE;
+  box-shadow: 0 18px 40px -15px rgba(29, 78, 216, 0.35), 0 0 24px rgba(191, 219, 254, 0.65), inset 0 0 0 1px #BFDBFE;
+}
+
+.reflective-card[data-theme='purple'] .reflective-card__body,
+.reflective-card--purple .reflective-card__body {
+  border: 2px solid #c084fc;
+  box-shadow: 0 18px 40px -15px rgba(124, 58, 237, 0.35), 0 0 24px rgba(195, 160, 255, 0.65), inset 0 0 0 1px #d8b4fe;
+}
+
+.reflective-card--compact .reflective-card__avatar {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 8px;
+  border-radius: 14px;
+}
+
+.reflective-card--compact .reflective-card__name {
+  font-size: 20px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.reflective-card--compact .reflective-card__role {
+  font-size: 13px;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.reflective-card--compact .reflective-card__footer {
+  margin-top: 14px;
+}
+
+.reflective-card--compact .reflective-card__tile {
+  width: 38px;
+  height: 38px;
+}
+
+/* Horizontal card mode for slider & landscape rectangular cards */
+.reflective-card--horizontal {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.reflective-card--horizontal .reflective-card__content {
+  padding: clamp(12px, 3.5vw, 18px) clamp(14px, 4vw, 22px);
+  justify-content: space-between;
+}
+
+.reflective-card--horizontal .reflective-card__header {
+  gap: 10px;
+  font-size: clamp(11px, 2.8vw, 13px);
+}
+
+.reflective-card--horizontal .reflective-card__badge {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.reflective-card--horizontal .reflective-card__identity {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 3vw, 16px);
+  margin-top: auto;
+  margin-bottom: auto;
+  min-width: 0;
+}
+
+.reflective-card--horizontal .reflective-card__avatar {
+  width: clamp(48px, 13vw, 62px);
+  height: clamp(48px, 13vw, 62px);
+  margin-bottom: 0;
+  border-radius: clamp(12px, 3vw, 16px);
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 6px 16px -2px rgba(124, 58, 237, 0.25);
+}
+
+.reflective-card--horizontal .reflective-card__name {
+  font-size: clamp(15px, 3.8vw, 20px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.reflective-card--horizontal .reflective-card__role {
+  font-size: clamp(11px, 2.8vw, 13px);
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+.reflective-card--horizontal .reflective-card__footer {
+  margin-top: auto;
+  gap: 12px;
+}
+
+.reflective-card--horizontal .reflective-card__label {
+  font-size: clamp(10px, 2.5vw, 11px);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.reflective-card--horizontal .reflective-card__value {
+  font-size: clamp(13px, 3.2vw, 15px);
+  font-weight: 700;
+}
+
+.reflective-card--horizontal .reflective-card__tile {
+  width: clamp(34px, 8vw, 40px);
+  height: clamp(34px, 8vw, 40px);
+  border-radius: 10px;
+}

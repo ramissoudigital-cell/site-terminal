@@ -1,0 +1,62 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile document",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "accessLevel": { "type": "number" },
+        "pinCode": { "type": "string" },
+        "email": { "type": "string" },
+        "subject": { "type": "string" },
+        "accreditationCode": { "type": "string" }
+      },
+      "required": ["id", "name", "role", "accessLevel"]
+    },
+    "Student": {
+      "title": "Student",
+      "description": "Student record details",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "class": { "type": "string" },
+        "studentId": { "type": "string" }
+      },
+      "required": ["id", "name", "class", "studentId"]
+    },
+    "Schedule": {
+      "title": "Schedule",
+      "description": "Class schedule real-time document",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "classId": { "type": "string" },
+        "className": { "type": "string" },
+        "events": {
+          "type": "array",
+          "items": { "type": "object" }
+        },
+        "updatedAtIso": { "type": "string" }
+      },
+      "required": ["id", "classId", "events"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User accounts collection"
+    },
+    "/students/{studentId}": {
+      "schema": "Student",
+      "description": "Student records collection"
+    },
+    "/schedules/{scheduleId}": {
+      "schema": "Schedule",
+      "description": "Class schedules collection"
+    }
+  }
+}
