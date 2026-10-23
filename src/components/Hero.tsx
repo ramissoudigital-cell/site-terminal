@@ -108,9 +108,10 @@ export const Hero: React.FC<HeroProps> = ({
             {/* Boutons d'action principaux */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
               {/* Bouton Principal : Télécharger pour Android */}
-              <button
-                type="button"
-                onClick={onDownloadApk}
+              <a
+                href="/Terminal-D.apk"
+                download="Terminal-D.apk"
+                onClick={() => onDownloadApk()}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-4 rounded-2xl text-base font-bold text-white bg-gradient-to-r from-[#2563EB] via-[#1D4ED8] to-[#0B1F5B] hover:from-[#1E40AF] hover:to-[#07143D] shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5 glow-blue group cursor-pointer"
               >
                 <div className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center">
@@ -118,13 +119,13 @@ export const Hero: React.FC<HeroProps> = ({
                 </div>
                 <div className="text-left">
                   <span className="block text-xs uppercase tracking-wider text-sky-200 font-semibold leading-tight">
-                    Fichier APK certifié
+                    Fichier APK certifié (23 Mo)
                   </span>
                   <span className="block text-base font-bold leading-tight">
                     Télécharger pour Android
                   </span>
                 </div>
-              </button>
+              </a>
 
               {/* Bouton Secondaire : Télécharger pour iOS */}
               <a

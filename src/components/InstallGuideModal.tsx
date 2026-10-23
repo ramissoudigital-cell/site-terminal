@@ -116,17 +116,18 @@ export const InstallGuideModal: React.FC<InstallGuideModalProps> = ({
           >
             Fermer
           </button>
-          <button
-            type="button"
+          <a
+            href="/Terminal-D.apk"
+            download="Terminal-D.apk"
             onClick={() => {
               onClose();
               onDownloadApk();
             }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#2563EB] hover:bg-[#1D4ED8] transition-colors shadow-sm glow-blue"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#2563EB] hover:bg-[#1D4ED8] transition-colors shadow-sm glow-blue cursor-pointer"
           >
             <Download className="w-4 h-4" />
             <span>Lancer le téléchargement ({APP_CONFIG.release.apkSize})</span>
-          </button>
+          </a>
         </div>
       </div>
     </div>

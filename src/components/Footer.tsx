@@ -80,7 +80,7 @@ export const Footer: React.FC<FooterProps> = ({
                   href="https://terminal-d-jra3.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors text-left"
+                  className="hover:text-white transition-colors text-left cursor-pointer inline-block"
                 >
                   Télécharger pour iOS (iPhone)
                 </a>

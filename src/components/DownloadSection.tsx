@@ -162,14 +162,15 @@ export const DownloadSection: React.FC<DownloadSectionProps> = ({
             {/* Actions de téléchargement Android */}
             <div className="pt-8 space-y-3">
               {config.isApkAvailable ? (
-                <button
-                  type="button"
-                  onClick={onDownloadApk}
+                <a
+                  href="/Terminal-D.apk"
+                  download="Terminal-D.apk"
+                  onClick={() => onDownloadApk()}
                   className="w-full py-4 px-6 rounded-2xl font-black text-sm text-white bg-gradient-to-r from-[#2563EB] via-[#1D4ED8] to-[#0B1F5B] hover:from-[#1D4ED8] hover:to-[#07143D] shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5 glow-blue cursor-pointer"
                 >
                   <Download className="w-5 h-5 text-[#38BDF8]" />
                   <span>Télécharger l'APK ({config.apkSize})</span>
-                </button>
+                </a>
               ) : (
                 <button
                   type="button"
@@ -311,7 +312,7 @@ export const DownloadSection: React.FC<DownloadSectionProps> = ({
               </a>
 
               <p className="text-center text-[11px] text-slate-500">
-                Ouvre l'application directement sur Safari ou installe-la sur ton écran d'accueil iPhone.
+                Guide pas à pas pour installer l'application sur iPhone via Safari ou TestFlight.
               </p>
             </div>
           </div>

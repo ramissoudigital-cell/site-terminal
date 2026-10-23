@@ -78,7 +78,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenWebDemo, onOpenInstallModa
             </a>
 
             <a
-              href="#telechargement"
+              href="/Terminal-D.apk"
+              download="Terminal-D.apk"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#2563EB] to-[#0B1F5B] hover:from-[#1D4ED8] hover:to-[#07143D] transition-all shadow-md hover:shadow-lg glow-blue cursor-pointer"
             >
               <Smartphone className="w-3.5 h-3.5 text-[#38BDF8]" />
@@ -120,7 +121,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenWebDemo, onOpenInstallModa
                 href="https://terminal-d-jra3.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={handleLinkClick}
                 className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold text-[#0B1F5B] bg-slate-100"
               >
                 <svg viewBox="0 0 170 170" className="w-4 h-4 fill-current text-[#0B1F5B]">
@@ -129,7 +130,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenWebDemo, onOpenInstallModa
                 <span>Télécharger pour iOS</span>
               </a>
               <a
-                href="#telechargement"
+                href="/Terminal-D.apk"
+                download="Terminal-D.apk"
                 onClick={handleLinkClick}
                 className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#2563EB] to-[#0B1F5B]"
               >

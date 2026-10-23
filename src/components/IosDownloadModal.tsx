@@ -183,7 +183,7 @@ export const IosDownloadModal: React.FC<IosDownloadModalProps> = ({
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#2563EB] hover:bg-[#1D4ED8] transition-colors shadow-sm glow-blue cursor-pointer"
           >
             <Globe className="w-4 h-4" />
-            <span>Ouvrir l'application iOS (En ligne)</span>
+            <span>Ouvrir sur Safari (iPhone)</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </a>
         </div>

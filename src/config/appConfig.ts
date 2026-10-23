@@ -54,18 +54,17 @@ export const APP_CONFIG = {
   // Informations de distribution
   release: {
     version: "v1.2.0",
-    releaseDate: "15 Octobre 2026",
-    apkSize: "20.3 Mo",
+    releaseDate: "22 Octobre 2026",
+    apkSize: "23 Mo",
     minAndroidVersion: "Android 7.0 (Nougat) ou version ultérieure",
-    // Lien direct vers le fichier APK réel
     apkDownloadUrl: "/Terminal-D.apk",
     isApkAvailable: true,
-    webAppUrl: "#webapp-demo",
+    webAppUrl: "https://terminal-d-jra3.vercel.app/",
     isWebAppAvailable: true,
-    iosVersion: "v1.2.0",
+    iosVersion: "v1.2.0 (Web & PWA)",
     isIosAvailable: true,
     iosAppStoreUrl: "https://terminal-d-jra3.vercel.app/",
-    iosStatusText: "Disponible pour iPhone & iPad",
+    iosStatusText: "Disponible en ligne pour iOS",
     changelog: [
       {
         version: "v1.2.0",
