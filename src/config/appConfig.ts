@@ -54,8 +54,8 @@ export const APP_CONFIG = {
   // Informations de distribution
   release: {
     version: "v1.2.0",
-    releaseDate: "22 Octobre 2026",
-    apkSize: "23 Mo",
+    releaseDate: "25 Octobre 2026",
+    apkSize: "23.8 Mo",
     minAndroidVersion: "Android 7.0 (Nougat) ou version ultérieure",
     apkDownloadUrl: "/Terminal-D.apk",
     isApkAvailable: true,
