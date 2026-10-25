@@ -119,7 +119,7 @@ export const Hero: React.FC<HeroProps> = ({
                 </div>
                 <div className="text-left">
                   <span className="block text-xs uppercase tracking-wider text-sky-200 font-semibold leading-tight">
-                    Fichier APK certifié (23 Mo)
+                    Fichier APK certifié ({APP_CONFIG.release.apkSize})
                   </span>
                   <span className="block text-base font-bold leading-tight">
                     Télécharger pour Android
